@@ -1,0 +1,737 @@
+@font-face{
+    font-family:'donald';
+    src:url("../fonts/donald-icon115b.eot?5gap68");
+    src:url("../fonts/donald-icon115b.eot?5gap68#iefix") format("embedded-opentype"),
+    url("../fonts/donald-icon115b.ttf?5gap68") format("truetype"),
+    url("../fonts/donald-icon115b.woff?5gap68") format("woff"),
+    url("../fonts/donald-icon115b.svg?5gap68#donald-icon") format("svg");
+    font-weight:normal;font-style:normal;font-display:block}
+.active-khala{
+	color: #fe5722;
+}
+@media (min-width: 992px) {
+	.sidebar-product { display: block!important; width: 25%!important; }
+	.main-product { width: 75%!important; }
+}
+@media (min-width: 768px) {
+	.sidebar-product { display: block; }
+}
+@media (max-width: 767px) {
+	.sidebar-product { display: none; } 
+}
+/* hien thi color san pham chi tiet */
+.d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.pro-details-color-wrap {
+    font-size: 14px;
+    font-weight: 700;
+    color: #253237;
+}
+.pro-details-color-wrap span {
+    display: block;
+    margin: 0 0 10px;
+}
+
+.pro-details-color-content li {
+    width: 1.75rem;
+    height: 1.75rem;
+    display: inline-block;
+    margin-right: 15px;
+    box-shadow: 2px 2px 4px 0 rgba(0,0,0,.2);
+    border: 1px solid rgba(0,0,0,.05);
+    cursor: pointer;
+    background-size: contain;
+    background: #fff;
+    background-color: rgb(255, 255, 255);
+}
+.product-size{
+	margin-left: 25px;
+}
+.select-detail{
+	padding: 0px 40px 0px 0px;
+}
+.pro-details-color-content li:hover {
+    border: 2px solid #434A54;
+}
+.color-active {
+    border: 2px solid #434A54 !important;
+}
+.Blue{
+    background-color: blue!important;
+}
+.Red{
+    background-color: red!important;
+}
+.Yellow{
+    background-color: yellow!important;
+}
+.Black{
+    background-color: black!important;
+}
+.White{
+    background-color: white!important;
+}
+.Green{
+    background-color: green!important;
+}
+.Brown{
+    background-color: brown!important;
+}
+.Orange{
+    background-color: orange!important;
+}
+.Pink{
+    background-color: pink!important;
+}
+.Gray{
+    background-color: gray!important;
+} 
+.Purple{
+    background-color: purple!important;
+}
+/* end hien thi color san pham chi tiet */
+
+/*margin top div quantity */
+.quantity-margin-top{
+	margin-top: 20px!important;
+}
+/* label mới them position để hien thị duoc z-index*/
+.label-new{
+	position: relative;
+}
+
+/* xu lý buttong tang giảm trong giỏ hàng */
+.product-options-bottom {
+    
+    overflow: hidden;
+    
+    display: inline-block;
+    width: 100%;
+}
+.product-form__item--quantity {
+    overflow: hidden;
+    
+}
+.form_qty {
+    
+    border: 1px solid #d7d7d7;
+    display: block;
+    height: 33px;
+    width: auto;
+    position: relative;
+    width: 75px;
+    text-align: left;
+    background-color: #fff;
+}
+input.quantity-selector {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    font-size: 16px;
+    color: #323232;
+    padding: 0;
+    border: none;
+        border-right-color: currentcolor;
+        border-right-style: none;
+        border-right-width: medium;
+    height: 31px;
+    width: 40px;
+    text-align: center;
+    background: #fff;
+    border-right: 1px solid #d7d7d7;
+}
+.product-form__item--quantity .items {
+    width: 33px;
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    line-height: 20px;
+    right: 0;
+    text-align: center;
+}
+.product-form__item--quantity .items.increase {
+    top: 0;
+}
+.product-form__item--quantity .items.reduced {
+    bottom: 0;
+}
+/*coupn */
+.khala-btn-coupon{
+	line-height: 1.9;
+}
+/*checkout*/
+.your-order-area .your-order-wrap {
+    padding: 38px 45px 44px;
+    background: #f6f6f6;
+}
+.your-order-area .your-order-wrap .your-order-product-info .your-order-top ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.your-order-area .your-order-wrap .your-order-product-info .your-order-top ul li {
+    font-size: 16px;
+    font-weight: 700;
+    list-style: outside none none;
+    color: #253237;
+}
+.your-order-area .your-order-wrap .your-order-product-info .your-order-middle {
+    border-bottom: 1px solid #dee0e4;
+    border-top: 1px solid #dee0e4;
+    margin: 29px 0;
+    padding: 19px 0 18px;
+}
+.your-order-area .your-order-wrap .your-order-product-info .your-order-middle ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0 0 10px;
+}
+.your-order-area .your-order-wrap .your-order-product-info .your-order-bottom ul {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.your-order-area .your-order-wrap .your-order-product-info .your-order-bottom ul li.your-order-shipping {
+    font-size: 16px;
+    color: #253237;
+    font-weight: 600;
+}
+.your-order-area .your-order-wrap .your-order-product-info .your-order-total {
+    border-bottom: 1px solid #dee0e4;
+    border-top: 1px solid #dee0e4;
+    margin: 18px 0 33px;
+    padding: 17px 0 19px;
+}
+.your-order-area .your-order-wrap .your-order-product-info .your-order-total ul {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.your-order-area .your-order-wrap .your-order-product-info .your-order-total ul li.order-total {
+    font-weight: 700;
+    color: #212121;
+    font-size: 18px;
+}
+.grand-totall h4.grand-totall-title, .your-order-area .your-order-wrap .your-order-product-info .your-order-total ul li.total-amount-checkout {
+    color: #ef1e1e;
+}
+.your-order-area .payment-accordion:last-child {
+    margin: 0 0 0;
+}
+.your-order-area .payment-accordion {
+    margin: 0 0 16px;
+}
+.your-order-area .payment-accordion .panel-body {
+    padding: 5px 0 0 0;
+}
+.Place-order {
+    margin-top: 25px;
+}
+.your-order-area .Place-order > a {
+    background-color: #444;
+    color: #fff;
+    display: block;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1;
+    padding: 18px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 50px;
+    z-index: 9;
+}
+a.btn-hover:hover{
+	background-color: #fe5722;
+}
+/*giao hang dia chi khac */
+.open-toggle, .open-toggle2 {
+    display: none;
+}
+.mb-20px{
+	margin-bottom: 20px;
+}
+/*order*/
+.order-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #222;
+    padding: 3rem;
+    border: 2px solid #e1e1e1;
+    border-radius: 3px;
+}
+.order-message i {
+    font-size: 2.4rem;
+    color: #a8c26e;
+    margin-top: -.1rem;
+    margin-right: 0.5rem;
+    }
+.order-results {
+    display: flex;
+    padding: 4rem 0rem;
+}
+.overview-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5rem;
+    flex: 1;
+    }
+@media only screen and (max-width: 767px) {
+  .order-results {
+    display: flex;
+    flex-direction: column;
+    }
+  .overview-item {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    }
+    .overview-item span {
+    width: 50%;
+    text-align: left;
+    } 
+}
+
+.title-simple {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 2.6rem;
+    text-transform: uppercase;
+}
+
+
+.order-details-table{
+    width: 100%;
+}
+.order-details-table thead {
+    border-bottom: 1px solid #e1e1e1;
+}
+.summary-subtitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    color: #222;
+    margin-bottom: 0;
+    padding: 1rem 0;
+}
+.order-details-table tbody tr:first-child td {
+    padding-top: 1rem;
+}
+
+.product-name {
+    margin-bottom: .6rem;
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #222;
+    padding-right: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.order-details-table .product-price {
+    font-size: 1.4rem;
+    color: #666;
+    font-weight: 400;
+    padding-top: 1.5rem;
+}
+
+.order-details-table .product-name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 3.5;
+}
+.order-details-table .summary-subtotal-price, .order-details-table .product-price {
+    text-align: right;
+}
+
+.product-price {
+    
+    margin-bottom: .6rem;
+    
+}
+.summary-subtotal {
+    border-bottom: 1px solid #e1e1e1;
+}
+.summary-subtotal-price {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 0;
+    font-family: Poppins,sans-serif;
+}
+.order-details-table .summary-subtotal-price {
+    font-weight: 600;
+}
+
+.summary-subtitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    color: #222;
+    margin-bottom: 0;
+    padding: 2rem 0;
+}
+.summary-total-price {
+    font-size: 2rem;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+    color: #222;
+    text-align: right;
+    margin-bottom: 0;
+    font-family: Poppins,sans-serif;
+}
+.address-info {
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.pt-8{
+    padding-top: 4rem !important;
+}
+.cart-shiping-update > a {
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    color: #253237;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 18px 63px 17px;
+    text-transform: uppercase;
+}
+.cart-shiping-update > a:hover,.single-my-account .myaccount-info-wrapper .billing-back-btn .billing-btn button:hover{
+    background-color: #ef1e1e;
+    color: white;
+}
+
+.btn-khala{
+    background-color: #ef1e1e;
+    color: white;
+    border-color: #ef1e1e;
+}
+.btn-khala:hover {
+    color: #fff;
+    background-color: #253237;
+    border-color: #253237;
+}
+.mtb-60{
+	margin: 60px 0px;
+}
+/* rating */
+.ratting-form-wrapper {
+    padding-left: 30px;
+}
+.single-review {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 50px;
+}
+.description-review-bottom {
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+}
+.single-review .review-top-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0 0 10px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.single-review .review-top-wrap .review-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.single-review .review-top-wrap .review-left .review-name {
+    margin-right: 25px;
+}
+.single-review .review-top-wrap .review-left .rating-product {
+    line-height: 1;
+}
+.rating-product {
+    margin-bottom: 6px;
+}
+.mb-0, .my-0 {
+    margin-bottom: 0 !important;
+}
+.single-review .review-img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 90px;
+    flex: 0 0 90px;
+    margin: 0 15px 0 0;
+}
+.ratting-form-wrapper .ratting-form form .star-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 6px 0 20px;
+}
+.ratting-form-wrapper .ratting-form form .star-box span {
+    margin: 0 15px 0 0;
+}
+.rating-stars .star-1 {
+    z-index: 10;
+}
+.rating-stars .star-2 {
+    z-index: 9;
+}
+.rating-stars .star-3 {
+    z-index: 8;
+}
+.rating-stars .star-4 {
+    z-index: 7;
+}
+
+.rating-stars {
+    display: flex;
+    position: relative;
+    height: 24px;
+    font-size: 2.2rem;
+    margin:0 auto;
+}
+.rating-stars a {
+    color: rgba(0,0,0,0.16);
+    text-indent: -9999px;
+    letter-spacing: 1px;
+    width: 26px;
+    letter-spacing: .2em;
+}
+.rating-stars .star-1::before {
+    width: 20%;
+}
+.rating-stars .star-2::before {
+    width: 40%;
+}
+.rating-stars .star-3::before {
+    width: 60%;
+}
+.rating-stars .star-4::before {
+    width: 80%;
+}
+.rating-stars .star-5::before {
+    content: "\e94b\e94b\e94b\e94b\e94b";
+}
+.rating-stars a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 24px;
+    line-height: 1;
+    font-family: 'Donald';
+    text-indent: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+.rating-stars a.active::before, .rating-stars a:hover::before {
+    content: "\e94b\e94b\e94b\e94b\e94b";
+    color: #d26e4b;
+}
+
+.rating-stars a.active-tab-review::before, .rating-stars a:hover::before {
+    content: "\e94b\e94b\e94b\e94b\e94b";
+    color: #d26e4b;
+}
+/* thiet lap canh giua cho cai block hien thi san pham */
+.padding-left-start-khala{
+    display: flex;
+    align-items: center;
+   
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-size: 11px;
+    letter-spacing: .2em;
+}
+.description-review-topbar.nav a.active::after {
+    background: #ef1e1e;
+    
+}
+
+/* ngoi sao nho */
+.small-start > .rating-stars {
+    
+    font-size: 1rem;
+}
+.small-start > .rating-stars a {
+    width: 18px;
+}
+
+/*hien thi sao cho tieu de*/
+.pro-details-rating-wrap {
+    display: flex;
+    margin: 10px 0 0;
+}
+.pro-details-rating-wrap .rating-product {
+    margin-right: 20px;
+}
+
+/*rating cho may block san pham canh le bang voi tieu de*/
+.block-start-khala{
+	margin:0;
+}
+
+/* scroll neo ben trai */
+.custom-scoll .scoll-cate li.neo1{    
+   background-image: url('../images/neo1.png');       
+}
+.custom-scoll .scoll-cate li.neo2{    
+   background-image: url('../images/neo2.png');       
+}
+.custom-scoll .scoll-cate li.neo3{    
+   background-image: url('../images/neo3.png');       
+}
+.custom-scoll .scoll-cate li.neo4{    
+   background-image: url('../images/neo4.png');       
+}
+.custom-scoll .scoll-cate li.neo5{    
+   background-image: url('../images/neo5.png');       
+}
+/* icon xem gan day */
+#so-groups i.fa-recent{
+background: url("../images/icon-recent.webp") no-repeat;	
+}
+/* icon my account */
+#so-groups .form-content .form-box a > span > i.fa-history {
+    background: url('../images/order-history.png') no-repeat;
+}
+#so-groups .form-content .form-box a > span > i.fa-shoppingcart {
+    background: url('../images/shopping-cart.png') no-repeat;
+}
+#so-groups .form-content .form-box a > span > i.fa-register {
+    background: url('../images/icon-register.png') no-repeat;
+}
+#so-groups .form-content .form-box a > span > i.fa-account {
+    background: url('../images/icon-account.png') no-repeat;
+}
+#so-groups .form-content .form-box a > span > i.fa-download {
+    background: url('../images/icon-download.png') no-repeat;
+}
+#so-groups .form-content .form-box a > span > i.fa-login {
+    background: url('../images/icon-login.png') no-repeat;
+}
+/* trang tai khoản */
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+    float: none;
+}
+.mr-auto, .mx-auto {
+    margin-right: auto !important;
+}
+.single-my-account {
+    margin-bottom: 20px!important;
+    border: 1px solid #ebebeb!important;
+}
+.single-my-account h3.panel-title {
+    
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+    text-transform: uppercase;
+    line-height: 2;
+}
+.single-my-account h3.panel-title a:hover {
+    color: #ef1e1e;
+}
+.single-my-account .myaccount-info-wrapper {
+    padding: 30px 20px;
+    background-color: #fff;
+}
+.single-my-account .myaccount-info-wrapper .account-info-wrapper {
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 28px;
+    padding-bottom: 30px;
+}
+.single-my-account .myaccount-info-wrapper .billing-info {
+    margin-bottom: 20px;
+}
+.single-my-account .myaccount-info-wrapper .billing-back-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 26px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.single-my-account .myaccount-info-wrapper .billing-back-btn .billing-btn button {
+    background-color: #f2f2f2;
+    border: medium none;
+    color: #253237;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 16px 35px 17px;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+    outline: none;
+    border-radius: 30px;
+}
+
+/*add to cart popup*/
+.ss-loading {
+  z-index: 999;
+  background: white url('../images/ajax-loader2ab5.gif') center 14px no-repeat;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 50% !important;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  width: 56px;
+  height: 56px;
+  margin-left: -28px;
+  margin-top: -28px;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  text-indent: -999em;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+
+
