@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\View;
 //su dung de quy
 use App\Components\Recusive;
 
+//su dung https duong dan
+use Illuminate\Routing\UrlGenerator;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -27,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(UrlGenerator $url)
     {
         /*Paginator::useBootstrap();
         Schema::defaultStringLength(191);
