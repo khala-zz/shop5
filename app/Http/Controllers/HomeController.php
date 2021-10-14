@@ -33,6 +33,7 @@ class HomeController extends Controller
     
     }
     public function home(){
+        dd('test');
     	//get setting
     	$settings = $this -> setting -> select('setting_key','setting_value') -> where('is_active',1) ->whereNotIn('id',[6,7])->get();
 
