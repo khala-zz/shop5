@@ -13,7 +13,7 @@ $(function () {
             $.ajax({
 
                 type:'get',
-                url:'http://localhost/shop4/public/khalaadmin/get-product-features',
+                url:'https://khala-shop4.herokuapp.com/khalaadmin/get-product-features',
                 data:{id_category:idCategory},
                 success:function(resp){
                    
@@ -81,7 +81,7 @@ $(function () {
     	let id = $(this).data('value');
     	$.ajax({
                 type:'get',
-                url:'http://localhost/shop4/public/khalaadmin/delete-image-product-gallery',
+                url:'https://khala-shop4.herokuapp.com/khalaadmin/delete-image-product-gallery',
                 data:{id_image:id},
                 success:function(resp){
                     

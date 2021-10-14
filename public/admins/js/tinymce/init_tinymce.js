@@ -1,7 +1,7 @@
  $(function(){	
         //add tinymce
         let editor_config = {
-        	path_absolute : "http://localhost/shop4/public/",
+        	path_absolute : "https://khala-shop4.herokuapp.com/",
         	selector: 'textarea.tinymce_editor_init',
         	relative_urls: false,
         	plugins: [
