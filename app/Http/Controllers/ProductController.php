@@ -266,13 +266,13 @@ class ProductController extends Controller
 	public function updateCart(Request $request){
 
 		//dd('test');
-		$ids_string = implode($request->input('cart_id', []),',');
-		dd($ids_string);
-		$ids = explode(',',$ids_string);
+		//$ids_string = implode($request->input('cart_id', []),',');
+		//dd($ids_string);
+		$ids = $request->input('cart_id', []);
 		
 		//lay quantity
-		$qty_string = implode($request -> qtybutton,',');
-		$qty = explode(',',$qty_string);
+		//$qty_string = implode($request -> qtybutton,',');
+		$qty = $request->input('qtybutton', []);
 		
 		
 		//xóa sesion coupon cũ trước khi cap nhat product
