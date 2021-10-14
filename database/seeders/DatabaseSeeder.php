@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
         UsersTableSeeder::class,
         PaymentMethodsTableSeeder::class,
+        CityTableSeeder::class,
         
     ]);
         // insert the initial permissions
