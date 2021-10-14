@@ -265,6 +265,7 @@ class ProductController extends Controller
 	//update cart
 	public function updateCart(Request $request){
 
+		dd('test');
 		$ids_string = implode($request -> cart_id,',');
 		$ids = explode(',',$ids_string);
 		
