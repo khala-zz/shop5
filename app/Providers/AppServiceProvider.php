@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Paginator::useBootstrap();
+        /*Paginator::useBootstrap();
         Schema::defaultStringLength(191);
         //get tat ca category
         $categories = Category::select('id','title','parent_id','image')  -> where('is_active',1) -> get();
@@ -39,7 +39,10 @@ class AppServiceProvider extends ServiceProvider
 
         $htmlOption = $recusive -> categoryRecusiveFront($parentId = '');
         // share cho menu danh muc san pham
-        View::share(['categories_share' => $categories, 'htmlOption' => $htmlOption]);
+        View::share(['categories_share' => $categories, 'htmlOption' => $htmlOption]);*/
+        if (env('APP_ENV') !== 'local') {
+                    $url->forceScheme('https');
+              }
 
     }
 }
