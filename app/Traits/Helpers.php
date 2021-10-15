@@ -63,6 +63,7 @@ trait Helpers
             ->resize($width, $height, function ($constraint) {
                 $constraint->aspectRatio();
             })->save($savePath);*/
+        $googleDriveStorage_image = Storage::disk('google_drive');
         //large    
         if(Str::contains($savePath, '1Q7gpPodh56tCp1cY4mJ35F-mL7mW5ozH')){
 
