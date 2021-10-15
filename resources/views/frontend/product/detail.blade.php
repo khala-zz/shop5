@@ -83,10 +83,13 @@
 						        		<div id="FeaturedImageZoom-product-template" class="large-image product-single__photo product-single__photo--has-thumbnails">
 						        			<!-- get image dau tien trong gallery -->
                                     		@php 
-                                    			$productGalleryFirst = $product -> gallery -> first();
-                                    			//get hinh anh large tu google drive
+                                    			//khai bao storage google
 									            $googleDriveStorage_large = Storage::disk('large_google_drive');
-									            //fileinfo large
+									            $googleDriveStorage_small = Storage::disk('small_google_drive');
+									            //get lay image dau tien cho hieu ung gallery
+                                    			$productGalleryFirst = $product -> gallery -> first();
+                                    			
+									            //get lay file info tu google storage large
 						                        $fileinfo_large = collect($googleDriveStorage_large->listContents('/', false))
 						                            ->where('type', 'file')
 						                            ->where('name', $productGalleryFirst -> image)
@@ -99,7 +102,7 @@
 						          			</a>
 						        		</div>
 								        <div class="thumbnails-slide thumbnails-wrapper">
-								          	<div id="thumb-slider" class="owl-carousel ">
+								          	{{-- <div id="thumb-slider" class="owl-carousel ">
 								            	<!--galerry -->
                                 				@forelse($product -> gallery as $index => $imageGallery)
 									            	<a 
@@ -107,6 +110,35 @@
 										            data-index="{{$index}}"
 										            data-image="{{asset('uploads/'.$product->id.'/large/'.$imageGallery -> image)}}">
 									              		<img class="product-single__thumbnail-image" src="{{asset('uploads/'.$product->id.'/small/'.$imageGallery -> image)}}" alt="{{$product -> title}}">
+									            	</a>
+									            @empty
+			                                    	<p> Chưa có gallery </p>
+			                                    @endforelse
+			                                    <!-- end gallery -->	
+								            	
+          									</div> --}}
+
+          									{{-- show galery google storage --}}
+          									<div id="thumb-slider" class="owl-carousel ">
+								            	<!--galerry -->
+                                				@forelse($product -> gallery as $index => $imageGallery)
+                                					@php 
+								                        //get image small from gg storage
+								                        $fileinfo_small = collect($googleDriveStorage_small->listContents('/', false))
+								                            ->where('type', 'file')
+								                            ->where('name', $imageGallery -> image)
+								                            ->first(); 
+								                        //fileinfo large
+								                        $fileinfo_big = collect($googleDriveStorage_large->listContents('/', false))
+								                            ->where('type', 'file')
+								                            ->where('name', $imageGallery -> image)
+								                            ->first(); 
+							                    	@endphp
+									            	<a 
+										            class="thumbnail" data-zoom-image="{{asset($googleDriveStorage_large -> url($fileinfo_big['path']))}}"
+										            data-index="{{$index}}"
+										            data-image="{{asset($googleDriveStorage_large -> url($fileinfo_big['path']))}}">
+									              		<img class="product-single__thumbnail-image" src="{{asset($googleDriveStorage_small -> url($fileinfo_small['path']))}}" alt="{{$product -> title}}">
 									            	</a>
 									            @empty
 			                                    	<p> Chưa có gallery </p>
@@ -166,7 +198,14 @@
 									              	
 									              	items: [
 									              		@foreach($product -> gallery as $imageGallery)
-											                {src: '{{asset('uploads/'.$product->id.'/large/'.$imageGallery -> image)}}'},
+									              			@php 
+									              											                        //fileinfo large
+										                        $fileinfo_large_js = collect($googleDriveStorage_large->listContents('/', false))
+										                            ->where('type', 'file')
+										                            ->where('name', $imageGallery -> image)
+										                            ->first(); 
+									              			@endphp
+											                {src: '{{asset($googleDriveStorage_large -> url($fileinfo_large_js['path']))}}'},
 									                 	@endforeach
 										                
 										                 ],
