@@ -25,8 +25,10 @@ trait Helpers
     ];*/
     protected $imagesSizes = [
         
-        'large' => ['width' => 600, 'height' => 600],
-        'small' => ['width' => 110, 'height' => 110],
+        /*'large' => ['width' => 600, 'height' => 600],
+        'small' => ['width' => 110, 'height' => 110],*/
+        '1Q7gpPodh56tCp1cY4mJ35F-mL7mW5ozH' => ['width' => 600, 'height' => 600],
+        '19_X0lc8GknbdDeEJ1vDo4ve7N2uPEaXs' => ['width' => 110, 'height' => 110],
 
     ];
 
@@ -52,12 +54,35 @@ trait Helpers
     }
 
 
-    function resizeImage($imagePath, $savePath, $width, $height)
+    function resizeImage($imagePath, $savePath, $width, $height, $uploaded_file)
     {
-        Image::make($imagePath)
+        /*Image::make($imagePath)
             ->resize($width, $height, function ($constraint) {
                 $constraint->aspectRatio();
-            })->save($savePath);
+            })->save($savePath);*/
+        //large    
+        if(Str::contains($savePath, '1Q7gpPodh56tCp1cY4mJ35F-mL7mW5ozH')){
+
+            $googleDriveStorage = Storage::disk('large_google_drive');
+           
+           
+            $url = $googleDriveStorage_image -> url($uploaded_file);
+
+            $resize = Image::make($url)
+            ->fit($width, $height)->encode('jpg');
+            
+            $googleDriveStorage -> put($uploaded_file, $resize);
+            
+        }
+
+        //small 
+        if(Str::contains($savePath, '19_X0lc8GknbdDeEJ1vDo4ve7N2uPEaXs')){
+            $googleDriveStorage = Storage::disk('small_google_drive');
+            $url = $googleDriveStorage_image -> url($uploaded_file);
+             $resize = Image::make($url)
+            ->fit($width, $height)->encode('jpg');
+            $googleDriveStorage -> put($uploaded_file, $resize);
+        }
     }
 
     function createProductUploadDirs($product_id , $imagesSizes)

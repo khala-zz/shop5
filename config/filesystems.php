@@ -52,6 +52,39 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
         ],
 
+        //thu muc product 
+        'google_drive' => [
+            'driver' => 'google_drive',
+            'clientId' => '724549789014-p4jauk64b4ouss2ntlljbcb55udbs9f8.apps.googleusercontent.com',
+            'clientSecret' => 'YRQVXzGC-cPd0uUBP-lvmbkj',
+            'refreshToken' => '1//04sNZcON_6orGCgYIARAAGAQSNwF-L9IraAx4B5NldedwBY5QLVfBsMU_GihAXbQUawiLWVkCJJUBEGTkOtWL2W4BchktjPlnDN8',
+            'folderId' => '1iuso5O6fepnoViK679d9EplkVHmN-UvY',
+        ],
+        //large
+        'large_google_drive' => [
+            'driver' => 'large_google_drive',
+            'clientId' => '724549789014-p4jauk64b4ouss2ntlljbcb55udbs9f8.apps.googleusercontent.com',
+            'clientSecret' => 'YRQVXzGC-cPd0uUBP-lvmbkj',
+            'refreshToken' => '1//04sNZcON_6orGCgYIARAAGAQSNwF-L9IraAx4B5NldedwBY5QLVfBsMU_GihAXbQUawiLWVkCJJUBEGTkOtWL2W4BchktjPlnDN8',
+            'folderId' => '1Q7gpPodh56tCp1cY4mJ35F-mL7mW5ozH',
+        ],
+        //medium
+        'medium_google_drive' => [
+            'driver' => 'medium_google_drive',
+            'clientId' => '724549789014-p4jauk64b4ouss2ntlljbcb55udbs9f8.apps.googleusercontent.com',
+            'clientSecret' => 'YRQVXzGC-cPd0uUBP-lvmbkj',
+            'refreshToken' => '1//04sNZcON_6orGCgYIARAAGAQSNwF-L9IraAx4B5NldedwBY5QLVfBsMU_GihAXbQUawiLWVkCJJUBEGTkOtWL2W4BchktjPlnDN8',
+            'folderId' => '1TZZWa2MumDZjO-gKIPjaFPCi2nvbFcvA',
+        ],
+        //small
+        'small_google_drive' => [
+            'driver' => 'small_google_drive',
+            'clientId' => '724549789014-p4jauk64b4ouss2ntlljbcb55udbs9f8.apps.googleusercontent.com',
+            'clientSecret' => 'YRQVXzGC-cPd0uUBP-lvmbkj',
+            'refreshToken' => '1//04sNZcON_6orGCgYIARAAGAQSNwF-L9IraAx4B5NldedwBY5QLVfBsMU_GihAXbQUawiLWVkCJJUBEGTkOtWL2W4BchktjPlnDN8',
+            'folderId' => '19_X0lc8GknbdDeEJ1vDo4ve7N2uPEaXs',
+        ],  
+
     ],
 
     /*
