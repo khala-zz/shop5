@@ -42,11 +42,19 @@ trait Helpers
 
         $destination = $destination ? $destination : base_path('public').'/uploads/';
 
+        //khai bao disk gg drive
+        $googleDriveStorage = Storage::disk('google_drive');
+
         if($request->hasfile($filename)) {
 
             foreach($request->file($filename) as $image) {
                 $ext = $image->getClientOriginalExtension();
                 $file_name = time().md5(rand(100,999)).'.'.$ext;
+                //luu len google drive
+                 //filePath = public_path('logo.png');
+                $fileData = \File::get($image);
+                $googleDriveStorage -> put($file_name, $fileData);
+                
                 $image->move($destination, $file_name);
                 @chmod($destination . '/' . $file_name, 777);
                 $files_array[] = $file_name;
