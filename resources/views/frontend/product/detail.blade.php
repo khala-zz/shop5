@@ -92,9 +92,9 @@
 
                                     		@endphp
                                     		@if(!empty($googleDriveStorage_large -> url($fileinfo_large['path'])))
-						          			<a href="{{asset($googleDriveStorage_large -> url($fileinfo_large['path']))}}" >
-						            			<img id="product-featured-image" src="{{asset($googleDriveStorage_large -> url($fileinfo_large['path']))}}" alt="{{$product -> title}}" data-zoom-image="{{asset($googleDriveStorage_large -> url($fileinfo_large['path']))}}" class="product-featured-img"/>
-						          			</a>
+							          			<a href="{{asset($googleDriveStorage_large -> url($fileinfo_large['path']))}}" >
+							            			<img id="product-featured-image" src="{{asset($googleDriveStorage_large -> url($fileinfo_large['path']))}}" alt="{{$product -> title}}" data-zoom-image="{{asset($googleDriveStorage_large -> url($fileinfo_large['path']))}}" class="product-featured-img"/>
+							          			</a>
 						          			@endif
 						        		</div>
 								        <div class="thumbnails-slide thumbnails-wrapper">
@@ -117,12 +117,13 @@
 								                            ->first(); 
 							                    	@endphp
 							                    	@if(!empty($googleDriveStorage_large -> url($fileinfo_big['path'])) && $googleDriveStorage_small -> url($fileinfo_small['path']))
-									            	<a 
-										            class="thumbnail" data-zoom-image="{{asset($googleDriveStorage_large -> url($fileinfo_big['path']))}}"
-										            data-index="{{$index}}"
-										            data-image="{{asset($googleDriveStorage_large -> url($fileinfo_big['path']))}}">
-									              		<img class="product-single__thumbnail-image" src="{{asset($googleDriveStorage_small -> url($fileinfo_small['path']))}}" alt="{{$product -> title}}">
-									            	</a>
+										            	<a 
+											            class="thumbnail" data-zoom-image="{{asset($googleDriveStorage_large -> url($fileinfo_big['path']))}}"
+											            data-index="{{$index}}"
+											            data-image="{{asset($googleDriveStorage_large -> url($fileinfo_big['path']))}}">
+										              		<img class="product-single__thumbnail-image" src="{{asset($googleDriveStorage_small -> url($fileinfo_small['path']))}}" alt="{{$product -> title}}">
+										            	</a>
+									            	@endif
 									            @empty
 			                                    	<p> Chưa có gallery </p>
 			                                    @endforelse
