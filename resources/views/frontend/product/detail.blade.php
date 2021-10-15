@@ -72,13 +72,7 @@
 			                                </div>
 										@endif
 										<!--end hien thi thong bao -->
-						        		{{-- <div id="FeaturedImageZoom-product-template" class="large-image product-single__photo product-single__photo--has-thumbnails">
-						        			<!-- get image dau tien trong gallery -->
-                                    		@php $productGalleryFirst = $product -> gallery -> first(); @endphp
-						          			<a href="{{asset('uploads/'.$product->id.'/large/'.$productGalleryFirst -> image)}}" >
-						            			<img id="product-featured-image" src="{{asset('uploads/'.$product->id.'/large/'.$productGalleryFirst -> image)}}" alt="{{$product -> title}}" data-zoom-image="{{asset('uploads/'.$product->id.'/large/'.$productGalleryFirst -> image)}}" class="product-featured-img"/>
-						          			</a>
-						        		</div> --}}
+						        		
 						        		{{-- get hinh danh dau tien trong gallery --}}
 						        		<div id="FeaturedImageZoom-product-template" class="large-image product-single__photo product-single__photo--has-thumbnails">
 						        			<!-- get image dau tien trong gallery -->
@@ -102,21 +96,7 @@
 						          			</a>
 						        		</div>
 								        <div class="thumbnails-slide thumbnails-wrapper">
-								          	{{-- <div id="thumb-slider" class="owl-carousel ">
-								            	<!--galerry -->
-                                				@forelse($product -> gallery as $index => $imageGallery)
-									            	<a 
-										            class="thumbnail" data-zoom-image="{{asset('uploads/'.$product->id.'/large/'.$imageGallery -> image)}}"
-										            data-index="{{$index}}"
-										            data-image="{{asset('uploads/'.$product->id.'/large/'.$imageGallery -> image)}}">
-									              		<img class="product-single__thumbnail-image" src="{{asset('uploads/'.$product->id.'/small/'.$imageGallery -> image)}}" alt="{{$product -> title}}">
-									            	</a>
-									            @empty
-			                                    	<p> Chưa có gallery </p>
-			                                    @endforelse
-			                                    <!-- end gallery -->	
-								            	
-          									</div> --}}
+								          	
 
           									{{-- show galery google storage --}}
           									<div id="thumb-slider" class="owl-carousel ">

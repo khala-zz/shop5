@@ -195,7 +195,7 @@
 
         <input type="file" class="form-control" name="multi-image[]" multiple accept="image/*" id="gallery-photo-add"/>
       <!-- hien thi nhieu image -->
-        {{-- <div class="row" >
+        <div class="row" >
           @if(isset($image_gallery) && !empty($image_gallery))
             @foreach($image_gallery as $gallery)
                     <div class="col-lg-3 delete-ele-{{$gallery -> id}}">
@@ -204,8 +204,8 @@
                     </div>
             @endforeach     
           @endif       
-        </div> --}}
-        <div class="row" >
+        </div>
+        {{-- <div class="row" >
           @if(isset($image_gallery) && !empty($image_gallery))
             @php 
                 //su dung google drive
@@ -229,7 +229,7 @@
                     </div>
             @endforeach     
            @endif       
-         </div>
+         </div> --}}
     </div> 
 
 </div>
