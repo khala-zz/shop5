@@ -72,11 +72,30 @@
 			                                </div>
 										@endif
 										<!--end hien thi thong bao -->
-						        		<div id="FeaturedImageZoom-product-template" class="large-image product-single__photo product-single__photo--has-thumbnails">
+						        		{{-- <div id="FeaturedImageZoom-product-template" class="large-image product-single__photo product-single__photo--has-thumbnails">
 						        			<!-- get image dau tien trong gallery -->
                                     		@php $productGalleryFirst = $product -> gallery -> first(); @endphp
 						          			<a href="{{asset('uploads/'.$product->id.'/large/'.$productGalleryFirst -> image)}}" >
 						            			<img id="product-featured-image" src="{{asset('uploads/'.$product->id.'/large/'.$productGalleryFirst -> image)}}" alt="{{$product -> title}}" data-zoom-image="{{asset('uploads/'.$product->id.'/large/'.$productGalleryFirst -> image)}}" class="product-featured-img"/>
+						          			</a>
+						        		</div> --}}
+						        		{{-- get hinh danh dau tien trong gallery --}}
+						        		<div id="FeaturedImageZoom-product-template" class="large-image product-single__photo product-single__photo--has-thumbnails">
+						        			<!-- get image dau tien trong gallery -->
+                                    		@php 
+                                    			$productGalleryFirst = $product -> gallery -> first();
+                                    			//get hinh anh large tu google drive
+									            $googleDriveStorage_large = Storage::disk('large_google_drive');
+									            //fileinfo large
+						                        $fileinfo_large = collect($googleDriveStorage_large->listContents('/', false))
+						                            ->where('type', 'file')
+						                            ->where('name', $productGalleryFirst -> image)
+						                            ->first(); 
+                                    			 //echo $googleDriveStorage_large -> url($fileinfo_large['path']);
+
+                                    		@endphp
+						          			<a href="{{asset($googleDriveStorage_large -> url($fileinfo_large['path']))}}" >
+						            			<img id="product-featured-image" src="{{asset($googleDriveStorage_large -> url($fileinfo_large['path']))}}" alt="{{$product -> title}}" data-zoom-image="{{asset($googleDriveStorage_large -> url($fileinfo_large['path']))}}" class="product-featured-img"/>
 						          			</a>
 						        		</div>
 								        <div class="thumbnails-slide thumbnails-wrapper">
