@@ -91,7 +91,7 @@
                                     			 //echo $googleDriveStorage_large -> url($fileinfo_large['path']);
 
                                     		@endphp
-                                    		@if(!empty($googleDriveStorage_large -> url($fileinfo_large['path'])))
+                                    		@if(!empty($fileinfo_large['path']))
 							          			<a href="{{asset($googleDriveStorage_large -> url($fileinfo_large['path']))}}" >
 							            			<img id="product-featured-image" src="{{asset($googleDriveStorage_large -> url($fileinfo_large['path']))}}" alt="{{$product -> title}}" data-zoom-image="{{asset($googleDriveStorage_large -> url($fileinfo_large['path']))}}" class="product-featured-img"/>
 							          			</a>
@@ -116,7 +116,7 @@
 								                            ->where('name', $imageGallery -> image)
 								                            ->first(); 
 							                    	@endphp
-							                    	@if(!empty($googleDriveStorage_large -> url($fileinfo_big['path'])) && $googleDriveStorage_small -> url($fileinfo_small['path']))
+							                    	@if(!empty($fileinfo_big['path']) && !empty($fileinfo_small['path']))
 										            	<a 
 											            class="thumbnail" data-zoom-image="{{asset($googleDriveStorage_large -> url($fileinfo_big['path']))}}"
 											            data-index="{{$index}}"
@@ -189,7 +189,7 @@
 										                            ->where('name', $imageGallery -> image)
 										                            ->first(); 
 									              			@endphp
-									              			@if(!empty($googleDriveStorage_large -> url($fileinfo_large_js['path'])))
+									              			@if(!empty($fileinfo_large_js['path']))
 											                	{src: '{{asset($googleDriveStorage_large -> url($fileinfo_large_js['path']))}}'},
 											                @endif
 									                 	@endforeach
