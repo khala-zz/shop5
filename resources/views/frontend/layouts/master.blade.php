@@ -9,8 +9,8 @@
   @yield('title')
   <meta name="description" content="EtroStore is a responsive ecommerce Shopify template that will be ideal for online shopping sites by its multipurpose.">
   <!-- Scrip -->
-  <link href="http://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet" type="text/css" media="all" />
-  <link href="http://fonts.googleapis.com/css?family=Work+Sans:600" rel="stylesheet" type="text/css" media="all" />
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet" type="text/css" media="all" />
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:600" rel="stylesheet" type="text/css" media="all" />
   <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/simple-line-icons.css') }}">
   <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
