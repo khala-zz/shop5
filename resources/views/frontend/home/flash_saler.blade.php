@@ -42,7 +42,12 @@
                           <div class="left-block col-lg-6 col-md-6 col-xxs-6">
                             <div class="product-image-container product-image">
                               <a class="grid-view-item__link image-ajax" href="{{url('san-pham/'.slugify($product -> title,'-').'/'.$product -> id)}}">
-                                <img class="img-responsive" src="{{asset('uploads/products-daidien/'.$product -> image)}}" alt="{{$product -> title}}">
+                                
+                                @if(file_exists(public_path('uploads/products-daidien/'.$product -> image)))
+                                  <img class="img-responsive" src="{{asset('uploads/products-daidien/'.$product -> image)}}" alt="{{$product -> title}}" />
+                                @else
+                                  <img class="img-responsive" src="{{asset('uploads/images/no-image.jpg')}}" alt="{{$product -> title}}" />
+                                @endif
                               </a>
                               <div class="label-info">
                               </div>
@@ -135,7 +140,11 @@
                           <div class="left-block col-lg-6 col-md-6 col-xxs-6">
                             <div class="product-image-container product-image">
                               <a class="grid-view-item__link image-ajax" href="{{url('san-pham/'.slugify($product -> title,'-').'/'.$product -> id)}}">
-                                <img class="img-responsive" src="{{asset('uploads/products-daidien/'.$product -> image)}}" alt="{{$product -> title}}">
+                                @if(file_exists(public_path('uploads/products-daidien/'.$product -> image)))
+                                  <img class="img-responsive" src="{{asset('uploads/products-daidien/'.$product -> image)}}" alt="{{$product -> title}}" />
+                                @else
+                                  <img class="img-responsive" src="{{asset('uploads/images/no-image.jpg')}}" alt="{{$product -> title}}" />
+                                @endif
                               </a>
                               <div class="label-info">
                               </div>
@@ -230,7 +239,11 @@
                     <div class="left-block col-lg-6 col-md-6 col-xxs-6">
                       <div class="product-image-container product-image">
                         <a class="grid-view-item__link image-ajax" href="{{url('san-pham/'.slugify($product -> title,'-').'/'.$product -> id)}}">
-                          <img class="img-responsive" src="{{asset('uploads/products-daidien/'.$product -> image)}}" alt="{{$product -> title}}">
+                          @if(file_exists(public_path('uploads/products-daidien/'.$product -> image)))
+                            <img class="img-responsive" src="{{asset('uploads/products-daidien/'.$product -> image)}}" alt="{{$product -> title}}" />
+                          @else
+                            <img class="img-responsive" src="{{asset('uploads/images/no-image.jpg')}}" alt="{{$product -> title}}" />
+                          @endif
                         </a>
                         <div class="label-info">
                         </div>
@@ -323,7 +336,11 @@
                     <div class="left-block col-lg-6 col-md-6 col-xxs-6">
                       <div class="product-image-container product-image">
                         <a class="grid-view-item__link image-ajax" href="{{url('san-pham/'.slugify($product -> title,'-').'/'.$product -> id)}}">
-                          <img class="img-responsive" src="{{asset('uploads/products-daidien/'.$product -> image)}}" alt="{{$product -> title}}">
+                          @if(file_exists(public_path('uploads/products-daidien/'.$product -> image)))
+                            <img class="img-responsive" src="{{asset('uploads/products-daidien/'.$product -> image)}}" alt="{{$product -> title}}" />
+                          @else
+                            <img class="img-responsive" src="{{asset('uploads/images/no-image.jpg')}}" alt="{{$product -> title}}" />
+                          @endif
                         </a>
                         <div class="label-info">
                         </div>
