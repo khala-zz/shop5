@@ -85,7 +85,7 @@
                       <div class="left-block">
                         <div class="product-image-container product-image">
                           <a class="grid-view-item__link image-ajax" href="{{url('san-pham/'.slugify($product -> title,'-').'/'.$product -> id)}}">
-                            @if(file_exits(public_path('uploads/products-daidien/'.$product -> image)))
+                            @if(file_exists(public_path('uploads/products-daidien/'.$product -> image)))
                               <img class="img-responsive" src="{{asset('uploads/products-daidien/'.$product -> image)}}" alt="{{$product -> title}}" />
                             @else
                               <img class="img-responsive" src="{{asset('uploads/images/no-image.jpg')}}" alt="{{$product -> title}}" />
